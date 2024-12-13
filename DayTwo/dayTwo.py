@@ -54,4 +54,14 @@ for report in listOfNumbers:
     if increasingSafe or decreasingSafe:
         safeCount+=1
 
-print(safeCount)
+count = 1
+safeCountOne = 0
+for report in listOfNumbers:
+    increasingSafe =  number_are_safe(report, True)
+    decreasingSafe = number_are_safe(report, False)
+    if increasingSafe or decreasingSafe:
+        safeCountOne+=1
+    print("count: " + str(count) + " safe: " + str(safeCountOne))
+    count += 1
+
+print(safeCountOne)
