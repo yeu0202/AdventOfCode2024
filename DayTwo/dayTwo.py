@@ -47,12 +47,15 @@ for pairs in splitNumbers:
         break
     listOfNumbers.append(list(map(cast_int, numbers)))
 
+count2 = 1
 safeCount = 0
 for report in listOfNumbers:
     increasingSafe =  number_are_safe_dampening(report, True)
     decreasingSafe = number_are_safe_dampening(report, False)
     if increasingSafe or decreasingSafe:
         safeCount+=1
+    print("count: " + str(count2) + " safe: " + str(safeCount))
+    count2 += 1
 
 count = 1
 safeCountOne = 0
@@ -61,7 +64,7 @@ for report in listOfNumbers:
     decreasingSafe = number_are_safe(report, False)
     if increasingSafe or decreasingSafe:
         safeCountOne+=1
-    print("count: " + str(count) + " safe: " + str(safeCountOne))
+    # print("count: " + str(count) + " safe: " + str(safeCountOne))
     count += 1
 
-print(safeCountOne)
+print(safeCount)
