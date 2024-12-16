@@ -1,1 +1,1 @@
-file = open('DayOne/dayOneInput.txt', 'r')
+file = open('day1/dayOneInput.txt', 'r')
